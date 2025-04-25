@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Special+Gothic+Condensed+One&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Allura&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Special+Gothic+Condensed+One&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Alfa+Slab+One&family=Allura&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Qwigley&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Special+Gothic+Condensed+One&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color:  #FFEDA3 ;
+}
+
+#paper {
+    background-color: #FDA388;
+    color: #FFFFFB;
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 7px 0px 15px rgba(0, 0, 0, 0.3) 
+}
+
+#paper-two {
+    background-color: #FFFFFB;
+    padding: 15px 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+#paper-two::-webkit-scrollbar {
+    width: 8px;
+}
+
+#paper-two::-webkit-scrollbar-track {
+    background: #FFF9E6;
+    border-radius: 10px;
+}
+
+#paper-two::-webkit-scrollbar-thumb {
+    background-color: #FDA388;
+    border-radius: 10px;
+    border: 2px solid #FFF9E6;
+}
+  /* para o Firefox */
+#paper-two {
+    scrollbar-width: thin;
+    scrollbar-color: #FDA388 #FFF9E6;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+h1, h2 {
+    font-family: "Alfa Slab One", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 2px; /* reduz o espaço real */
+    line-height: 1.1; /* diminui a altura da linha */
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 1.2; /* ajusta caso o texto tenha mais de uma linha */
+}
+
+#show-input form {
+    
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+#show-input input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    text-align: center;
+    border-style: none;
+    border-radius: 4px 0 0 4px; /* canto esquerdo arredondado */
+    font-family: "Kodchasan", sans-serif;
+    font-size: 10px;
+}
+
+#show-input button {
+    height: 30px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 0 4px 4px 0; /* canto direito arredondado */
+    background-color: #FFEDA0;
+    color: #FDA388;
+    text-shadow:
+    -1px -1px 0 #FFFFFB,
+    1px -1px 0 #FFF9E6,
+    -1px  1px 0 #FFF9E6,
+    1px  1px 0 #FFF9E6;
+    font-family: "Kodchasan", sans-serif;
+    cursor: pointer;
+}
+
+
+.lista-completa {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.marcar-feito {
+    background-color: #FFFFFB;
+    border: 1px solid #a58f8f;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    cursor: pointer;
+    color:transparent;
+    font-size: 15px;
+}
+
+.marcar-feito:hover {
+    background-color: #FDA388;
+}
+
+.tarefas-fazer {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 12px; /* Ajuste se necessário para caber na altura */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #FFEDA0;
+    color: #000;
+    width: 250px;
+    height: 20px; /* mesma altura da caixinha */
+    line-height: 20px; /* alinha o texto na vertical com a altura da div */
+    padding: 0 10px; /* padding lateral */
+    box-sizing: border-box;
+    overflow: hidden; /* evita que texto ultrapasse */
+    white-space: nowrap; /* força tudo numa linha só */
+    text-overflow: ellipsis; /* adiciona "..." se o texto for muito longo */
+    border-radius: 2px;
+    
+}
+
+.x-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.x-icon:hover {
+    border: 0.5px solid #FFFFFB;
+}
+
+.x-icon::before,
+.x-icon::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background-color: #FDA388; /* cor do "X" */
+    border: 1px solid #a58f8f;
+}
+
+.x-icon::before {
+    transform: rotate(45deg);
+}
+
+.x-icon::after {
+    transform: rotate(-45deg);
+}
+
+#show-hide {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+
+
