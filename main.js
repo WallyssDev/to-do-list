@@ -52,7 +52,7 @@ $(document).ready(function(){
         const tarefa = tarefasSalvas[indiceLI]; 
 
         if(tarefa.feita) {           
-            $(this).css('background-color', ''); 
+            $(this).css('background-color', '#FFFFFB'); 
             $(this).next().css('text-decoration', ''); 
             tarefa.feita = false; 
         } else {
